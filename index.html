@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta content='true' name='HandheldFriendly' />
+   <meta content='width' name='MobileOptimized' />
+   <meta content='yes' name='apple-mobile-web-app-capable' />
+   <link rel="stylesheet" href="css/style.css">
+   <title>Семейный бюджет</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <div class="field">
+            <div class="field__budget">Бюджет
+               <input type="number" class="budget">
+               <div class="field__budget-data"></div>
+            </div>
+            <div class="field__food">Еда
+               <input type="number" placeholder="0" class="food">
+               <div class="field__food-data"></div>
+            </div>
+            <div class="field__pharmacy-s">Аптека-С
+               <input type="number" class="pharm1">
+               <div class="field__pharmacy-s-data"></div>
+            </div>
+            <div class="field__pharmacy-x">Аптека-Х
+               <input type="number" class="pharm2">
+               <div class="field__pharmacy-x-data"></div>
+            </div>
+            <div class="field__communal-s">Коммуналка-С
+               <input type="number" class="comm1">
+               <div class="field__communal-s-data"></div>
+            </div>
+            <div class="field__communal-x">Коммуналка-Х
+               <input type="number" class="comm2">
+               <div class="field__communal-x-data"></div>
+            </div>
+            <div class="field__clothes">Одежда
+               <input type="number" class="clothes">
+               <div class="field__clothes-data"></div>
+            </div>
+            <div class="field__school">Школа
+               <input type="number" class="school">
+               <div class="field__school-data"></div>
+            </div>
+            <div class="field__hospital">Поликлиника
+               <input type="number" class="hospital">
+               <div class="field__hospital-data"></div>
+            </div>
+            <div class="field__cat">Кот
+               <input type="number" class="cat">
+               <div class="field__cat-data"></div>
+            </div>
+            <div class="field__unexpected">Непредвиденные расходы
+               <input type="number" class="unexpected">
+               <div class="field__unexpected-data"></div>
+            </div>
+            <div class="field__economy">Экономия
+               <div class="field__economy-data"></div>
+            </div>
+            <div class="field__buttons">
+               <button type="submit" class="field__btn-save">Сохранить</button>
+               <button type="submit" class="field__btn-show">Показать данные</button>
+               <button type="reset" class="field__btn-clear">Удалить данные</button>
+            </div>
+
+         </div>
+      </div>
+   </div>
+
+   <!-- подключаем jquery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!-- подключаем файл скриптов -->
+   <script src="js/script.js"></script>
+
+</body>
+
+</html>

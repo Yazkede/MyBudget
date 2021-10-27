@@ -1,0 +1,204 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+body{
+    background-color: rgb(95, 68, 68);
+}
+
+.container {
+    background-color: rgb(155, 151, 151);
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+.field {
+    font-size: 22px;
+    line-height: 30px;
+    padding-top: 100px;
+    
+    &__budget,
+    &__food,
+    &__pharmacy-s,
+    &__pharmacy-x,
+    &__communal-s,
+    &__communal-x,
+    &__clothes,
+    &__school,
+    &__hospital,
+    &__cat,
+    &__unexpected,
+    &__economy {
+        display: grid;
+        grid-template-columns: repeat(3, 22%);
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    &__budget,
+    &__unexpected,
+    &__economy {
+        margin-bottom: 50px;
+    }
+
+    &__budget-data,
+    &__economy-data{
+        font-size: 30px;
+        color: green;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__budget-data{
+        color:maroon;
+    }
+
+    &__food-data,
+    &__pharmacy-s-data,
+    &__pharmacy-x-data,
+    &__communal-s-data,
+    &__communal-x-data,
+    &__clothes-data,
+    &__school-data,
+    &__hospital-data,
+    &__cat-data,
+    &__unexpected-data {
+        color: darkblue;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__buttons{
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    &__btn-save {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 125px;
+        height: 55px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(233, 162, 10);
+        background-color: darkslateblue;
+        border: 2px solid rgb(51, 32, 161);
+        border-radius: 10%;
+    }
+    &__btn-save:hover {
+        background-color: rgb(40, 34, 75);
+        color: rgb(81, 233, 10);
+        transition-duration: 1s;
+        box-shadow: 0 0 2px 3px darkslateblue;
+    }
+    &__btn-save:active{
+        position: relative;
+        top:2px;
+    }
+
+    &__btn-show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 125px;
+        height: 55px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(233, 162, 10);
+        background-color: darkslateblue;
+        border: 2px solid rgb(51, 32, 161);
+        border-radius: 10%;
+    }
+    &__btn-show:hover {
+        background-color: rgb(40, 34, 75);
+        color: rgb(81, 233, 10);
+        transition-duration: 1s;
+        box-shadow: 0 0 2px 3px darkslateblue;
+    }
+    &__btn-show:active{
+        position: relative;
+        top:2px;
+    }
+
+    &__btn-clear {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 125px;
+        height: 55px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(233, 162, 10);
+        background-color: darkslateblue;
+        border: 2px solid rgb(51, 32, 161);
+        border-radius: 10%;
+        justify-content: center;
+    }
+    &__btn-clear:hover {
+        background-color: rgb(40, 34, 75);
+        color: rgb(81, 233, 10);
+        transition-duration: 1s;
+        box-shadow: 0 0 2px 3px darkslateblue;
+    }
+    &__btn-clear:active{
+        position: relative;
+        top:2px;
+    }
+
+    &__budget,
+    &__economy{
+        font-size: 30px;
+        font-weight: bold;
+        color:darkslateblue;
+        line-height: 45px;
+    }
+}
+
+.budget{
+    background-color: rgb(190, 187, 187);
+    border: 3px solid rgb(69, 75, 138);
+    padding-left: 5px;
+}
+.food:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.pharm1:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.pharm2:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.comm1:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.comm2:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.clothes:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.school:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.hospital:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.cat:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+.unexpected:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
+
+input{
+    font-size: 20px;
+    padding-left: 5px;
+}

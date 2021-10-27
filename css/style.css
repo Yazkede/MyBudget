@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+body {
+  background-color: #5f4444; }
+
+.container {
+  background-color: #9b9797;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh; }
+
+.field {
+  font-size: 22px;
+  line-height: 30px;
+  padding-top: 100px; }
+  .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__cat, .field__unexpected, .field__economy {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (22%)[3];
+    grid-template-columns: repeat(3, 22%);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 15px; }
+  .field__budget, .field__unexpected, .field__economy {
+    margin-bottom: 50px; }
+  .field__budget-data, .field__economy-data {
+    font-size: 30px;
+    color: green;
+    font-weight: bold;
+    text-align: center; }
+  .field__budget-data {
+    color: maroon; }
+  .field__food-data, .field__pharmacy-s-data, .field__pharmacy-x-data, .field__communal-s-data, .field__communal-x-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__cat-data, .field__unexpected-data {
+    color: darkblue;
+    font-weight: bold;
+    text-align: center; }
+  .field__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto; }
+  .field__btn-save {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 125px;
+    height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e9a20a;
+    background-color: darkslateblue;
+    border: 2px solid #3320a1;
+    border-radius: 10%; }
+  .field__btn-save:hover {
+    background-color: #28224b;
+    color: #51e90a;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-box-shadow: 0 0 2px 3px darkslateblue;
+    box-shadow: 0 0 2px 3px darkslateblue; }
+  .field__btn-save:active {
+    position: relative;
+    top: 2px; }
+  .field__btn-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 125px;
+    height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e9a20a;
+    background-color: darkslateblue;
+    border: 2px solid #3320a1;
+    border-radius: 10%; }
+  .field__btn-show:hover {
+    background-color: #28224b;
+    color: #51e90a;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-box-shadow: 0 0 2px 3px darkslateblue;
+    box-shadow: 0 0 2px 3px darkslateblue; }
+  .field__btn-show:active {
+    position: relative;
+    top: 2px; }
+  .field__btn-clear {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 125px;
+    height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #e9a20a;
+    background-color: darkslateblue;
+    border: 2px solid #3320a1;
+    border-radius: 10%;
+    justify-content: center; }
+  .field__btn-clear:hover {
+    background-color: #28224b;
+    color: #51e90a;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-box-shadow: 0 0 2px 3px darkslateblue;
+    box-shadow: 0 0 2px 3px darkslateblue; }
+  .field__btn-clear:active {
+    position: relative;
+    top: 2px; }
+  .field__budget, .field__economy {
+    font-size: 30px;
+    font-weight: bold;
+    color: darkslateblue;
+    line-height: 45px; }
+
+.budget {
+  background-color: #bebbbb;
+  border: 3px solid #454b8a;
+  padding-left: 5px; }
+
+.food:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.pharm1:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.pharm2:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.comm1:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.comm2:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.clothes:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.school:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.hospital:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.cat:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+.unexpected:focus {
+  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
+  box-shadow: 0 0 3px 5px darkslateblue; }
+
+input {
+  font-size: 20px;
+  padding-left: 5px; }
