@@ -34,9 +34,7 @@ BUTTON_CLEAR.addEventListener('click', onClearDataClick);
 
 
 function onSaveDataClick() {
-    localStorage.setItem('budget', parseFloat(BUDGET.value));
-    budgetData.textContent = localStorage.getItem('budget');
-
+    countBudget();
     countFood();
     countPharmacyS();
     countPharmacyX();
@@ -54,12 +52,48 @@ function onSaveDataClick() {
 function onGetDataClick() {
     budgetData.textContent = localStorage.getItem('budget');
     foodData.textContent = localStorage.getItem('food');
+    pharmSdata.textContent = localStorage.getItem('pharm1');
+    pharmXdata.textContent = localStorage.getItem('pharm2');
+    communalSdata.textContent = localStorage.getItem('comm1');
+    communalXdata.textContent = localStorage.getItem('comm2');
+    clothesData.textContent = localStorage.getItem('clothes');
+    schoolData.textContent = localStorage.getItem('school');
+    hospitalData.textContent = localStorage.getItem('hospital');
+    catData.textContent = localStorage.getItem('cat');
+    unexpectedData.textContent = localStorage.getItem('unexpected');
+    economy.textContent = localStorage.getItem('economy');
 }
 
-
 function onClearDataClick() {
-    localStorage.clear();
-    budgetData.textContent = "";
+    if (confirm('Данные удаляются навсегда. Подтвердите выполнение')) {
+        localStorage.clear();
+        budgetData.textContent = "";
+        foodData.textContent = "";
+        pharmSdata.textContent = "";
+        pharmXdata.textContent = "";
+        communalSdata.textContent = "";
+        communalXdata.textContent = "";
+        clothesData.textContent = "";
+        schoolData.textContent = "";
+        hospitalData.textContent = "";
+        catData.textContent = "";
+        unexpectedData.textContent = "";
+        economy.textContent = "";
+    }
+    return;
+}
+
+function countBudget() {
+    if (localStorage.getItem('budget') !== null) {
+        let newBudget = parseFloat(BUDGET.value) + parseFloat(localStorage.getItem('budget'));
+        localStorage.setItem('budget', newBudget);
+        budgetData.textContent = localStorage.getItem('budget');
+    } else {
+        localStorage.setItem('budget', parseFloat(BUDGET.value));
+        budgetData.textContent = parseFloat(BUDGET.value);
+    }
+    let budget = localStorage.getItem('budget');
+    return budget;
 }
 
 function countFood() {
