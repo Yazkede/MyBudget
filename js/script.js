@@ -62,13 +62,11 @@ function onClearDataClick() {
         budgetData.textContent = "";
         foodData.textContent = "";
         pharmSdata.textContent = "";
-        pharmXdata.textContent = "";
         communalSdata.textContent = "";
-        communalXdata.textContent = "";
         clothesData.textContent = "";
         schoolData.textContent = "";
         hospitalData.textContent = "";
-        catData.textContent = "";
+        petData.textContent = "";
         unexpectedData.textContent = "";
         economy.textContent = "";
     }
