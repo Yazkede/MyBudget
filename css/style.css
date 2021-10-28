@@ -69,7 +69,7 @@ body {
   font-size: 22px;
   line-height: 30px;
   padding-top: 100px; }
-  .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__cat, .field__unexpected, .field__economy {
+  .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (22%)[3];
@@ -87,7 +87,7 @@ body {
     text-align: center; }
   .field__budget-data {
     color: maroon; }
-  .field__food-data, .field__pharmacy-s-data, .field__pharmacy-x-data, .field__communal-s-data, .field__communal-x-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__cat-data, .field__unexpected-data {
+  .field__food-data, .field__pharmacy-s-data, .field__pharmacy-x-data, .field__communal-s-data, .field__communal-x-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
     color: darkblue;
     font-weight: bold;
     text-align: center; }
@@ -237,7 +237,7 @@ body {
   -webkit-box-shadow: 0 0 3px 5px darkslateblue;
   box-shadow: 0 0 3px 5px darkslateblue; }
 
-.cat:focus {
+.pet:focus {
   -webkit-box-shadow: 0 0 3px 5px darkslateblue;
   box-shadow: 0 0 3px 5px darkslateblue; }
 
