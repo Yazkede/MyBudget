@@ -69,6 +69,10 @@ body{
         margin-left: 20px;
     }
 
+    &__economy-data{
+        margin-left: 20px;
+    }
+
     &__buttons{
         display: flex;
         max-width: 800px;
@@ -323,7 +327,7 @@ input{
         &__btn-show,
         &__btn-clear {
             width: 90px;
-            height: 30px;
+            height: 35px;
             font-size: 14px;
         }
         &__budget,
@@ -386,7 +390,7 @@ input{
         &__btn-show,
         &__btn-clear {
             width: 80px;
-            height: 25px;
+            height: 30px;
             font-size: 12px;
         }
         &__budget,
