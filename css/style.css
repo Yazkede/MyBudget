@@ -72,8 +72,8 @@ body {
   .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (22%)[3];
-    grid-template-columns: repeat(3, 22%);
+    -ms-grid-columns: (30%)[3];
+    grid-template-columns: repeat(3, 30%);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -203,7 +203,8 @@ body {
 .budget {
   background-color: #bebbbb;
   border: 3px solid #454b8a;
-  padding-left: 5px; }
+  padding-left: 5px;
+  margin: 0 auto; }
 
 .food:focus {
   -webkit-box-shadow: 0 0 3px 5px darkslateblue;
@@ -247,4 +248,6 @@ body {
 
 input {
   font-size: 20px;
-  padding-left: 5px; }
+  padding-left: 5px;
+  max-width: 200px;
+  margin: 0 auto; }
