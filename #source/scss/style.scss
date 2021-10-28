@@ -9,7 +9,7 @@ body{
     background-color: rgb(155, 151, 151);
     max-width: 1200px;
     margin: 0 auto;
-    height: 100vh;
+    height: 200vh;
 }
 .field {
     font-size: 22px;
@@ -29,8 +29,9 @@ body{
     &__unexpected,
     &__economy {
         display: grid;
-        grid-template-columns: repeat(3, 30%);
+        grid-template-columns: repeat(3, 25%);
         justify-content: center;
+        gap: 15px;
         margin-bottom: 15px;
     }
     &__budget,
@@ -49,6 +50,7 @@ body{
 
     &__budget-data{
         color:maroon;
+        margin-left: 20px;
     }
 
     &__food-data,
@@ -64,6 +66,7 @@ body{
         color: darkblue;
         font-weight: bold;
         text-align: center;
+        margin-left: 20px;
     }
 
     &__buttons{
@@ -166,7 +169,6 @@ body{
     background-color: rgb(190, 187, 187);
     border: 3px solid rgb(69, 75, 138);
     padding-left: 5px;
-    margin: 0 auto;
 }
 .food:focus{
     box-shadow: 0 0 3px 5px darkslateblue;
@@ -203,5 +205,196 @@ input{
     font-size: 20px;
     padding-left: 5px;
     max-width: 200px;
+    display: flex;
     margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    input{
+        max-width: 150px;
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .field {
+        font-size: 18px;
+        line-height: 24px;
+        
+        &__budget,
+        &__food,
+        &__pharmacy-s,
+        &__pharmacy-x,
+        &__communal-s,
+        &__communal-x,
+        &__clothes,
+        &__school,
+        &__hospital,
+        &__pet,
+        &__unexpected,
+        &__economy {
+            grid-template-columns: repeat(3, 27%);
+        }
+
+        &__budget-data,
+        &__economy-data{
+            font-size: 20px;
+        }
+    
+        &__budget-data,
+        &__food-data,
+        &__pharmacy-s-data,
+        &__pharmacy-x-data,
+        &__communal-s-data,
+        &__communal-x-data,
+        &__clothes-data,
+        &__school-data,
+        &__hospital-data,
+        &__pet-data,
+        &__unexpected-data {
+            margin-left: 20px;
+        }
+    
+        &__buttons{
+            max-width: 600px;
+        }
+        &__btn-save,
+        &__btn-show,
+        &__btn-clear {
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+        }
+        &__budget,
+        &__economy{
+            font-size: 26px;
+            font-weight: bold;
+            color:darkslateblue;
+            line-height: 30px;
+        }
+    }
+}
+@media (max-width: 550px) {
+    input{
+        max-width: 120px;
+        font-size: 14px;
+        margin-left: 30px;
+    }
+    .field {
+        font-size: 16px;
+        line-height: 22px;
+        
+        &__budget,
+        &__food,
+        &__pharmacy-s,
+        &__pharmacy-x,
+        &__communal-s,
+        &__communal-x,
+        &__clothes,
+        &__school,
+        &__hospital,
+        &__pet,
+        &__unexpected,
+        &__economy {
+            grid-template-columns: repeat(3, 29%);
+        }
+
+        &__budget-data,
+        &__economy-data{
+            font-size: 18px;
+        }
+    
+        &__budget-data,
+        &__food-data,
+        &__pharmacy-s-data,
+        &__pharmacy-x-data,
+        &__communal-s-data,
+        &__communal-x-data,
+        &__clothes-data,
+        &__school-data,
+        &__hospital-data,
+        &__pet-data,
+        &__unexpected-data {
+            margin-left: 50px;
+        }
+    
+        &__buttons{
+            max-width: 450px;
+        }
+        &__btn-save,
+        &__btn-show,
+        &__btn-clear {
+            width: 90px;
+            height: 30px;
+            font-size: 14px;
+        }
+        &__budget,
+        &__economy{
+            font-size: 22px;
+            font-weight: bold;
+            color:darkslateblue;
+            line-height: 26px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    input{
+        max-width: 100px;
+        font-size: 14px;
+        margin-left: 30px;
+    }
+    .field {
+        font-size: 14px;
+        line-height: 20px;
+        
+        &__budget,
+        &__food,
+        &__pharmacy-s,
+        &__pharmacy-x,
+        &__communal-s,
+        &__communal-x,
+        &__clothes,
+        &__school,
+        &__hospital,
+        &__pet,
+        &__unexpected,
+        &__economy {
+            grid-template-columns: repeat(3, 29%);
+        }
+
+        &__budget-data,
+        &__economy-data{
+            font-size: 16px;
+        }
+    
+        &__budget-data,
+        &__food-data,
+        &__pharmacy-s-data,
+        &__pharmacy-x-data,
+        &__communal-s-data,
+        &__communal-x-data,
+        &__clothes-data,
+        &__school-data,
+        &__hospital-data,
+        &__pet-data,
+        &__unexpected-data {
+            margin-left: 50px;
+        }
+    
+        &__buttons{
+            max-width: 300px;
+        }
+        &__btn-save,
+        &__btn-show,
+        &__btn-clear {
+            width: 80px;
+            height: 25px;
+            font-size: 12px;
+        }
+        &__budget,
+        &__economy{
+            font-size: 18px;
+            font-weight: bold;
+            color:darkslateblue;
+            line-height: 22px;
+        }
+    }
 }
