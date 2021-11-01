@@ -2,6 +2,7 @@ const BUDGET = document.querySelector('.budget');
 const FOOD = document.querySelector('.food');
 const PHARMACY_S = document.querySelector('.pharm1');
 const COMMUNAL_S = document.querySelector('.comm1');
+const MOBI = document.querySelector('.mobi');
 const CLOTHES = document.querySelector('.clothes');
 const SCHOOL = document.querySelector('.school');
 const HOSPITAL = document.querySelector('.hospital');
@@ -16,6 +17,7 @@ let budgetData = document.querySelector('.field__budget-data');
 let foodData = document.querySelector('.field__food-data');
 let pharmSdata = document.querySelector('.field__pharmacy-s-data');
 let communalSdata = document.querySelector('.field__communal-s-data');
+let mobiData = document.querySelector('.field__mobi-data');
 let clothesData = document.querySelector('.field__clothes-data');
 let schoolData = document.querySelector('.field__school-data');
 let hospitalData = document.querySelector('.field__hospital-data');
@@ -34,6 +36,7 @@ function onSaveDataClick() {
     countFood();
     countPharmacyS();
     countCommunalS();
+    countMobi();
     countClothes();
     countSchool();
     countHospital();
@@ -48,6 +51,7 @@ function onGetDataClick() {
     foodData.textContent = localStorage.getItem('food');
     pharmSdata.textContent = localStorage.getItem('pharm1');
     communalSdata.textContent = localStorage.getItem('comm1');
+    mobiData.textContent = localStorage.getItem('mobi');
     clothesData.textContent = localStorage.getItem('clothes');
     schoolData.textContent = localStorage.getItem('school');
     hospitalData.textContent = localStorage.getItem('hospital');
@@ -63,6 +67,7 @@ function onClearDataClick() {
         foodData.textContent = "";
         pharmSdata.textContent = "";
         communalSdata.textContent = "";
+        mobiData.textContent = "";
         clothesData.textContent = "";
         schoolData.textContent = "";
         hospitalData.textContent = "";
@@ -150,6 +155,26 @@ function countCommunalS() {
         localStorage.setItem('comm1', COMMUNAL_S.value);
         communalSdata.textContent = localStorage.getItem('comm1');
         COMMUNAL_S.value = '';
+    }
+}
+
+function countMobi() {
+    if (localStorage.getItem('mobi') !== null && MOBI.value !== '') {
+        let newMobi = parseFloat(MOBI.value) + parseFloat(localStorage.getItem('mobi'));
+        localStorage.setItem('mobi', newMobi);
+        mobiData.textContent = localStorage.getItem('mobi');
+        MOBI.value = '';
+    } else if (localStorage.getItem('mobi') !== null && MOBI.value === '') {
+        let newMobi = localStorage.getItem('mobi');
+        localStorage.setItem('mobi', newMobi);
+        mobiData.textContent = localStorage.getItem('mobi');
+    } else if (localStorage.getItem('mobi') === null && MOBI.value === '') {
+        localStorage.setItem('mobi', 0);
+        mobiData.textContent = localStorage.getItem('mobi');
+    } else if (localStorage.getItem('mobi') === null && MOBI.value !== '') {
+        localStorage.setItem('mobi', MOBI.value);
+        mobiData.textContent = localStorage.getItem('mobi');
+        MOBI.value = '';
     }
 }
 
@@ -254,6 +279,7 @@ function countEconomy() {
         - parseFloat(localStorage.getItem('food'))
         - parseFloat(localStorage.getItem('pharm1'))
         - parseFloat(localStorage.getItem('comm1'))
+        - parseFloat(localStorage.getItem('mobi'))
         - parseFloat(localStorage.getItem('clothes'))
         - parseFloat(localStorage.getItem('school'))
         - parseFloat(localStorage.getItem('hospital'))

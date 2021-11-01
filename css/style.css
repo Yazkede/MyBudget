@@ -57,10 +57,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit; }
 
 body {
-  background-color: #5f4444; }
+  background-color: #794b4b; }
 
 .container {
-  background-color: #9b9797;
+  background-color: #b87e32;
   max-width: 1200px;
   margin: 0 auto;
   height: 200vh; }
@@ -69,7 +69,7 @@ body {
   font-size: 22px;
   line-height: 30px;
   padding-top: 100px; }
-  .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
+  .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__mobi, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (25%)[3];
@@ -81,6 +81,15 @@ body {
     margin-bottom: 15px; }
   .field__budget, .field__unexpected, .field__economy {
     margin-bottom: 50px; }
+  .field__food img {
+    max-width: 50px;
+    border-radius: 50%; }
+  .field__pharmacy-s img {
+    max-width: 50px;
+    border-radius: 50%; }
+  .field__communal-s img {
+    max-width: 50px;
+    border-radius: 50%; }
   .field__budget-data, .field__economy-data {
     font-size: 30px;
     color: green;
@@ -89,7 +98,7 @@ body {
   .field__budget-data {
     color: maroon;
     margin-left: 20px; }
-  .field__food-data, .field__pharmacy-s-data, .field__pharmacy-x-data, .field__communal-s-data, .field__communal-x-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
+  .field__food-data, .field__pharmacy-s-data, .field__communal-s-data, .field__mobi-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
     color: darkblue;
     font-weight: bold;
     text-align: center;
@@ -218,15 +227,11 @@ body {
   -webkit-box-shadow: 0 0 3px 5px darkslateblue;
   box-shadow: 0 0 3px 5px darkslateblue; }
 
-.pharm2:focus {
-  -webkit-box-shadow: 0 0 3px 5px darkslateblue;
-  box-shadow: 0 0 3px 5px darkslateblue; }
-
 .comm1:focus {
   -webkit-box-shadow: 0 0 3px 5px darkslateblue;
   box-shadow: 0 0 3px 5px darkslateblue; }
 
-.comm2:focus {
+.mobi:focus {
   -webkit-box-shadow: 0 0 3px 5px darkslateblue;
   box-shadow: 0 0 3px 5px darkslateblue; }
 
@@ -267,12 +272,12 @@ input {
   .field {
     font-size: 18px;
     line-height: 24px; }
-    .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
+    .field__budget, .field__food, .field__pharmacy-s, .field__communal-s, .field__mobi, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
       -ms-grid-columns: (27%)[3];
       grid-template-columns: repeat(3, 27%); }
     .field__budget-data, .field__economy-data {
       font-size: 20px; }
-    .field__budget-data, .field__food-data, .field__pharmacy-s-data, .field__pharmacy-x-data, .field__communal-s-data, .field__communal-x-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
+    .field__budget-data, .field__food-data, .field__pharmacy-s-data, .field__communal-s-data, .field__mobi-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
       margin-left: 20px; }
     .field__buttons {
       max-width: 600px; }
@@ -294,12 +299,12 @@ input {
   .field {
     font-size: 16px;
     line-height: 22px; }
-    .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
+    .field__budget, .field__food, .field__pharmacy-s, .field__communal-s, .field__mobi, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
       -ms-grid-columns: (29%)[3];
       grid-template-columns: repeat(3, 29%); }
     .field__budget-data, .field__economy-data {
       font-size: 18px; }
-    .field__budget-data, .field__food-data, .field__pharmacy-s-data, .field__pharmacy-x-data, .field__communal-s-data, .field__communal-x-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
+    .field__budget-data, .field__food-data, .field__pharmacy-s-data, .field__communal-s-data, .field__mobi-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
       margin-left: 50px; }
     .field__buttons {
       max-width: 450px; }
@@ -321,12 +326,12 @@ input {
   .field {
     font-size: 14px;
     line-height: 20px; }
-    .field__budget, .field__food, .field__pharmacy-s, .field__pharmacy-x, .field__communal-s, .field__communal-x, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
+    .field__budget, .field__food, .field__pharmacy-s, .field__communal-s, .field__mobi, .field__clothes, .field__school, .field__hospital, .field__pet, .field__unexpected, .field__economy {
       -ms-grid-columns: (29%)[3];
       grid-template-columns: repeat(3, 29%); }
     .field__budget-data, .field__economy-data {
       font-size: 16px; }
-    .field__budget-data, .field__food-data, .field__pharmacy-s-data, .field__pharmacy-x-data, .field__communal-s-data, .field__communal-x-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
+    .field__budget-data, .field__food-data, .field__pharmacy-s-data, .field__communal-s-data, .field__mobi-data, .field__clothes-data, .field__school-data, .field__hospital-data, .field__pet-data, .field__unexpected-data {
       margin-left: 50px; }
     .field__buttons {
       max-width: 300px; }

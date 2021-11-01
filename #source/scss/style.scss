@@ -2,11 +2,11 @@
 @import "nullstyle.scss";
 
 body{
-    background-color: rgb(95, 68, 68);
+    background-color: rgb(121, 75, 75);
 }
 
 .container {
-    background-color: rgb(155, 151, 151);
+    background-color: rgb(184, 126, 50);
     max-width: 1200px;
     margin: 0 auto;
     height: 200vh;
@@ -22,6 +22,7 @@ body{
     &__pharmacy-x,
     &__communal-s,
     &__communal-x,
+    &__mobi,
     &__clothes,
     &__school,
     &__hospital,
@@ -40,6 +41,19 @@ body{
         margin-bottom: 50px;
     }
 
+    &__food img{
+        max-width: 50px;
+        border-radius: 50%;
+    }
+    &__pharmacy-s img{
+        max-width: 50px;
+        border-radius: 50%;
+    }
+    &__communal-s img{
+        max-width: 50px;
+        border-radius: 50%;
+    }
+
     &__budget-data,
     &__economy-data{
         font-size: 30px;
@@ -55,9 +69,8 @@ body{
 
     &__food-data,
     &__pharmacy-s-data,
-    &__pharmacy-x-data,
     &__communal-s-data,
-    &__communal-x-data,
+    &__mobi-data,
     &__clothes-data,
     &__school-data,
     &__hospital-data,
@@ -180,13 +193,10 @@ body{
 .pharm1:focus{
     box-shadow: 0 0 3px 5px darkslateblue;
 }
-.pharm2:focus{
-    box-shadow: 0 0 3px 5px darkslateblue;
-}
 .comm1:focus{
     box-shadow: 0 0 3px 5px darkslateblue;
 }
-.comm2:focus{
+.mobi:focus{
     box-shadow: 0 0 3px 5px darkslateblue;
 }
 .clothes:focus{
@@ -226,9 +236,8 @@ input{
         &__budget,
         &__food,
         &__pharmacy-s,
-        &__pharmacy-x,
         &__communal-s,
-        &__communal-x,
+        &__mobi,
         &__clothes,
         &__school,
         &__hospital,
@@ -246,9 +255,8 @@ input{
         &__budget-data,
         &__food-data,
         &__pharmacy-s-data,
-        &__pharmacy-x-data,
         &__communal-s-data,
-        &__communal-x-data,
+        &__mobi-data,
         &__clothes-data,
         &__school-data,
         &__hospital-data,
@@ -289,9 +297,8 @@ input{
         &__budget,
         &__food,
         &__pharmacy-s,
-        &__pharmacy-x,
         &__communal-s,
-        &__communal-x,
+        &__mobi,
         &__clothes,
         &__school,
         &__hospital,
@@ -309,9 +316,8 @@ input{
         &__budget-data,
         &__food-data,
         &__pharmacy-s-data,
-        &__pharmacy-x-data,
         &__communal-s-data,
-        &__communal-x-data,
+        &__mobi-data,
         &__clothes-data,
         &__school-data,
         &__hospital-data,
@@ -352,9 +358,8 @@ input{
         &__budget,
         &__food,
         &__pharmacy-s,
-        &__pharmacy-x,
         &__communal-s,
-        &__communal-x,
+        &__mobi,
         &__clothes,
         &__school,
         &__hospital,
@@ -372,9 +377,8 @@ input{
         &__budget-data,
         &__food-data,
         &__pharmacy-s-data,
-        &__pharmacy-x-data,
         &__communal-s-data,
-        &__communal-x-data,
+        &__mobi-data,
         &__clothes-data,
         &__school-data,
         &__hospital-data,
