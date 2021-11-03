@@ -1,7 +1,7 @@
 const BUDGET = document.querySelector('.budget');
 const FOOD = document.querySelector('.food');
-const PHARMACY_S = document.querySelector('.pharm1');
-const COMMUNAL_S = document.querySelector('.comm1');
+const PHARMACY = document.querySelector('.pharm1');
+const COMMUNAL = document.querySelector('.comm1');
 const MOBI = document.querySelector('.mobi');
 const CLOTHES = document.querySelector('.clothes');
 const SCHOOL = document.querySelector('.school');
@@ -32,16 +32,16 @@ BUTTON_CLEAR.addEventListener('click', onClearDataClick);
 
 
 function onSaveDataClick() {
-    countBudget();
-    countFood();
-    countPharmacyS();
-    countCommunalS();
-    countMobi();
-    countClothes();
-    countSchool();
-    countHospital();
-    countPet();
-    countUnexpected();
+    budget.count()
+    food.count()
+    pharmacy.count()
+    communal.count()
+    mobi.count()
+    clothes.count()
+    school.count()
+    hospital.count()
+    pet.count()
+    unexpected.count()
     countEconomy();
 }
 
@@ -59,6 +59,7 @@ function onGetDataClick() {
     unexpectedData.textContent = localStorage.getItem('unexpected');
     economy.textContent = localStorage.getItem('economy');
 }
+
 
 function onClearDataClick() {
     if (confirm('Данные удаляются навсегда. Подтвердите выполнение')) {
@@ -78,201 +79,88 @@ function onClearDataClick() {
     return;
 }
 
-function countBudget() {
-    if (localStorage.getItem('budget') !== null && BUDGET.value !== '') {
-        let newBudget = parseFloat(BUDGET.value) + parseFloat(localStorage.getItem('budget'));
-        localStorage.setItem('budget', newBudget);
-        budgetData.textContent = localStorage.getItem('budget');
-        BUDGET.value = '';
-    } else if (localStorage.getItem('budget') !== null && BUDGET.value === '') {
-        let newBudget = localStorage.getItem('budget');
-        localStorage.setItem('budget', newBudget);
-        budgetData.textContent = localStorage.getItem('budget');
-    } else if (localStorage.getItem('budget') === null && BUDGET.value === '') {
-        localStorage.setItem('budget', 0);
-        budgetData.textContent = localStorage.getItem('budget');
-    } else if (localStorage.getItem('budget') === null && BUDGET.value !== '') {
-        localStorage.setItem('budget', BUDGET.value);
-        budgetData.textContent = localStorage.getItem('budget');
-        BUDGET.value = '';
+class Subject {
+
+    constructor(options) {
+        this.class = options.class
+        this.selector = options.selector
+        this.data = options.data
+    }
+
+    count() {
+        if (localStorage.getItem(this.class) !== null && this.selector.value !== '') {
+            let newOpt = parseFloat(this.selector.value) + parseFloat(localStorage.getItem(this.class));
+            localStorage.setItem(this.class, newOpt);
+            this.data.textContent = localStorage.getItem(this.class);
+            this.selector.value = '';
+        } else if (localStorage.getItem(this.class) !== null && this.selector.value === '') {
+            let newOpt = localStorage.getItem(this.class);
+            localStorage.setItem(this.class, newOpt);
+            this.data.textContent = localStorage.getItem(this.class);
+        } else if (localStorage.getItem(this.class) === null && this.selector.value === '') {
+            localStorage.setItem(this.class, 0);
+            this.data.textContent = localStorage.getItem(this.class);
+        } else if (localStorage.getItem(this.class) === null && this.selector.value !== '') {
+            localStorage.setItem(this.class, this.selector.value);
+            this.data.textContent = localStorage.getItem(this.class);
+            this.selector.value = '';
+        }
     }
 }
 
-function countFood() {
-    if (localStorage.getItem('food') !== null && FOOD.value !== '') {
-        let newFood = parseFloat(FOOD.value) + parseFloat(localStorage.getItem('food'));
-        localStorage.setItem('food', newFood);
-        foodData.textContent = localStorage.getItem('food');
-        FOOD.value = '';
-    } else if (localStorage.getItem('food') !== null && FOOD.value === '') {
-        let newFood = localStorage.getItem('food');
-        localStorage.setItem('food', newFood);
-        foodData.textContent = localStorage.getItem('food');
-    } else if (localStorage.getItem('food') === null && FOOD.value === '') {
-        localStorage.setItem('food', 0);
-        foodData.textContent = localStorage.getItem('food');
-    } else if (localStorage.getItem('food') === null && FOOD.value !== '') {
-        localStorage.setItem('food', FOOD.value);
-        foodData.textContent = localStorage.getItem('food');
-        FOOD.value = '';
-    }
-}
 
-function countPharmacyS() {
-    if (localStorage.getItem('pharm1') !== null && PHARMACY_S.value !== '') {
-        let newPharm = parseFloat(PHARMACY_S.value) + parseFloat(localStorage.getItem('pharm1'));
-        localStorage.setItem('pharm1', newPharm);
-        pharmSdata.textContent = localStorage.getItem('pharm1');
-        PHARMACY_S.value = '';
-    } else if (localStorage.getItem('pharm1') !== null && PHARMACY_S.value === '') {
-        let newPharm = localStorage.getItem('pharm1');
-        localStorage.setItem('pharm1', newPharm);
-        pharmSdata.textContent = localStorage.getItem('pharm1');
-    } else if (localStorage.getItem('pharm1') === null && PHARMACY_S.value === '') {
-        localStorage.setItem('pharm1', 0);
-        pharmSdata.textContent = localStorage.getItem('pharm1');
-    } else if (localStorage.getItem('pharm1') === null && PHARMACY_S.value !== '') {
-        localStorage.setItem('pharm1', PHARMACY_S.value);
-        pharmSdata.textContent = localStorage.getItem('pharm1');
-        PHARMACY_S.value = '';
-    }
-}
+const budget = new Subject({
+    class: 'budget',
+    selector: BUDGET,
+    data: budgetData
+})
+const food = new Subject({
+    class: 'food',
+    selector: FOOD,
+    data: foodData
+})
+const pharmacy = new Subject({
+    class: 'pharm1',
+    selector: PHARMACY,
+    data: pharmSdata
+})
+const communal = new Subject({
+    class: 'comm1',
+    selector: COMMUNAL,
+    data: communalSdata
+})
+const mobi = new Subject({
+    class: 'mobi',
+    selector: MOBI,
+    data: mobiData
+})
+const clothes = new Subject({
+    class: 'clothes',
+    selector: CLOTHES,
+    data: clothesData
+})
+const school = new Subject({
+    class: 'school',
+    selector: SCHOOL,
+    data: schoolData
+})
+const hospital = new Subject({
+    class: 'hospital',
+    selector: HOSPITAL,
+    data: hospitalData
+})
+const pet = new Subject({
+    class: 'pet',
+    selector: PET,
+    data: petData
+})
+const unexpected = new Subject({
+    class: 'unexpected',
+    selector: UNEXPECTED,
+    data: unexpectedData
+})
 
-function countCommunalS() {
-    if (localStorage.getItem('comm1') !== null && COMMUNAL_S.value !== '') {
-        let newComm = parseFloat(COMMUNAL_S.value) + parseFloat(localStorage.getItem('comm1'));
-        localStorage.setItem('comm1', newComm);
-        communalSdata.textContent = localStorage.getItem('comm1');
-        COMMUNAL_S.value = '';
-    } else if (localStorage.getItem('comm1') !== null && COMMUNAL_S.value === '') {
-        let newComm = localStorage.getItem('comm1');
-        localStorage.setItem('comm1', newComm);
-        communalSdata.textContent = localStorage.getItem('comm1');
-    } else if (localStorage.getItem('comm1') === null && COMMUNAL_S.value === '') {
-        localStorage.setItem('comm1', 0);
-        communalSdata.textContent = localStorage.getItem('comm1');
-    } else if (localStorage.getItem('comm1') === null && COMMUNAL_S.value !== '') {
-        localStorage.setItem('comm1', COMMUNAL_S.value);
-        communalSdata.textContent = localStorage.getItem('comm1');
-        COMMUNAL_S.value = '';
-    }
-}
 
-function countMobi() {
-    if (localStorage.getItem('mobi') !== null && MOBI.value !== '') {
-        let newMobi = parseFloat(MOBI.value) + parseFloat(localStorage.getItem('mobi'));
-        localStorage.setItem('mobi', newMobi);
-        mobiData.textContent = localStorage.getItem('mobi');
-        MOBI.value = '';
-    } else if (localStorage.getItem('mobi') !== null && MOBI.value === '') {
-        let newMobi = localStorage.getItem('mobi');
-        localStorage.setItem('mobi', newMobi);
-        mobiData.textContent = localStorage.getItem('mobi');
-    } else if (localStorage.getItem('mobi') === null && MOBI.value === '') {
-        localStorage.setItem('mobi', 0);
-        mobiData.textContent = localStorage.getItem('mobi');
-    } else if (localStorage.getItem('mobi') === null && MOBI.value !== '') {
-        localStorage.setItem('mobi', MOBI.value);
-        mobiData.textContent = localStorage.getItem('mobi');
-        MOBI.value = '';
-    }
-}
-
-function countClothes() {
-    if (localStorage.getItem('clothes') !== null && CLOTHES.value !== '') {
-        let newClothes = parseFloat(CLOTHES.value) + parseFloat(localStorage.getItem('clothes'));
-        localStorage.setItem('clothes', newClothes);
-        clothesData.textContent = localStorage.getItem('clothes');
-        CLOTHES.value = '';
-    } else if (localStorage.getItem('clothes') !== null && CLOTHES.value === '') {
-        let newClothes = localStorage.getItem('clothes');
-        localStorage.setItem('clothes', newClothes);
-        clothesData.textContent = localStorage.getItem('clothes');
-    } else if (localStorage.getItem('clothes') === null && CLOTHES.value === '') {
-        localStorage.setItem('clothes', 0);
-        clothesData.textContent = localStorage.getItem('clothes');
-    } else if (localStorage.getItem('clothes') === null && CLOTHES.value !== '') {
-        localStorage.setItem('clothes', CLOTHES.value);
-        clothesData.textContent = localStorage.getItem('clothes');
-        CLOTHES.value = '';
-    }
-}
-function countSchool() {
-    if (localStorage.getItem('school') !== null && SCHOOL.value !== '') {
-        let newSchool = parseFloat(SCHOOL.value) + parseFloat(localStorage.getItem('school'));
-        localStorage.setItem('school', newSchool);
-        schoolData.textContent = localStorage.getItem('school');
-        SCHOOL.value = '';
-    } else if (localStorage.getItem('school') !== null && SCHOOL.value === '') {
-        let newSchool = localStorage.getItem('school');
-        localStorage.setItem('school', newSchool);
-        schoolData.textContent = localStorage.getItem('school');
-    } else if (localStorage.getItem('school') === null && SCHOOL.value === '') {
-        localStorage.setItem('school', 0);
-        schoolData.textContent = localStorage.getItem('school');
-    } else if (localStorage.getItem('school') === null && SCHOOL.value !== '') {
-        localStorage.setItem('school', SCHOOL.value);
-        schoolData.textContent = localStorage.getItem('school');
-        SCHOOL.value = '';
-    }
-}
-function countHospital() {
-    if (localStorage.getItem('hospital') !== null && HOSPITAL.value !== '') {
-        let newHospital = parseFloat(HOSPITAL.value) + parseFloat(localStorage.getItem('hospital'));
-        localStorage.setItem('hospital', newHospital);
-        hospitalData.textContent = localStorage.getItem('hospital');
-        HOSPITAL.value = '';
-    } else if (localStorage.getItem('hospital') !== null && HOSPITAL.value === '') {
-        let newHospital = localStorage.getItem('hospital');
-        localStorage.setItem('hospital', newHospital);
-        hospitalData.textContent = localStorage.getItem('hospital');
-    } else if (localStorage.getItem('hospital') === null && HOSPITAL.value === '') {
-        localStorage.setItem('hospital', 0);
-        hospitalData.textContent = localStorage.getItem('hospital');
-    } else if (localStorage.getItem('hospital') === null && HOSPITAL.value !== '') {
-        localStorage.setItem('hospital', HOSPITAL.value);
-        hospitalData.textContent = localStorage.getItem('hospital');
-        HOSPITAL.value = '';
-    }
-}
-function countPet() {
-    if (localStorage.getItem('pet') !== null && PET.value !== '') {
-        let newPet = parseFloat(PET.value) + parseFloat(localStorage.getItem('pet'));
-        localStorage.setItem('pet', newPet);
-        petData.textContent = localStorage.getItem('pet');
-        PET.value = '';
-    } else if (localStorage.getItem('pet') !== null && PET.value === '') {
-        let newPet = localStorage.getItem('pet');
-        localStorage.setItem('pet', newPet);
-        petData.textContent = localStorage.getItem('pet');
-    } else if (localStorage.getItem('pet') === null && PET.value === '') {
-        localStorage.setItem('pet', 0);
-        petData.textContent = localStorage.getItem('pet');
-    } else if (localStorage.getItem('pet') === null && PET.value !== '') {
-        localStorage.setItem('pet', PET.value);
-        petData.textContent = localStorage.getItem('pet');
-        PET.value = '';
-    }
-}
-function countUnexpected() {
-    if (localStorage.getItem('unexpected') !== null && UNEXPECTED.value !== '') {
-        let newUnexpected = parseFloat(UNEXPECTED.value) + parseFloat(localStorage.getItem('unexpected'));
-        localStorage.setItem('unexpected', newUnexpected);
-        unexpectedData.textContent = localStorage.getItem('unexpected');
-        UNEXPECTED.value = '';
-    } else if (localStorage.getItem('unexpected') !== null && UNEXPECTED.value === '') {
-        let newUnexpected = localStorage.getItem('unexpected');
-        localStorage.setItem('unexpected', newUnexpected);
-        unexpectedData.textContent = localStorage.getItem('unexpected');
-    } else if (localStorage.getItem('unexpected') === null && UNEXPECTED.value === '') {
-        localStorage.setItem('unexpected', 0);
-        unexpectedData.textContent = localStorage.getItem('unexpected');
-    } else if (localStorage.getItem('unexpected') === null && UNEXPECTED.value !== '') {
-        localStorage.setItem('unexpected', UNEXPECTED.value);
-        unexpectedData.textContent = localStorage.getItem('unexpected');
-        UNEXPECTED.value = '';
-    }
-}
 function countEconomy() {
     let result;
     result = (parseFloat(localStorage.getItem('budget'))
