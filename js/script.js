@@ -3,6 +3,7 @@ const FOOD = document.querySelector('.food');
 const PHARMACY = document.querySelector('.pharm1');
 const COMMUNAL = document.querySelector('.comm1');
 const MOBI = document.querySelector('.mobi');
+const PROEZD = document.querySelector('.proezd');
 const CLOTHES = document.querySelector('.clothes');
 const SCHOOL = document.querySelector('.school');
 const HOSPITAL = document.querySelector('.hospital');
@@ -18,6 +19,7 @@ let foodData = document.querySelector('.field__food-data');
 let pharmSdata = document.querySelector('.field__pharmacy-s-data');
 let communalSdata = document.querySelector('.field__communal-s-data');
 let mobiData = document.querySelector('.field__mobi-data');
+let proezdData = document.querySelector('.field__proezd-data');
 let clothesData = document.querySelector('.field__clothes-data');
 let schoolData = document.querySelector('.field__school-data');
 let hospitalData = document.querySelector('.field__hospital-data');
@@ -37,6 +39,7 @@ function onSaveDataClick() {
     pharmacy.count()
     communal.count()
     mobi.count()
+    proezd.count()
     clothes.count()
     school.count()
     hospital.count()
@@ -52,6 +55,7 @@ function onGetDataClick() {
     pharmSdata.textContent = localStorage.getItem('pharm1');
     communalSdata.textContent = localStorage.getItem('comm1');
     mobiData.textContent = localStorage.getItem('mobi');
+    proezdData.textContent = localStorage.getItem('proezd');
     clothesData.textContent = localStorage.getItem('clothes');
     schoolData.textContent = localStorage.getItem('school');
     hospitalData.textContent = localStorage.getItem('hospital');
@@ -69,6 +73,7 @@ function onClearDataClick() {
         pharmSdata.textContent = "";
         communalSdata.textContent = "";
         mobiData.textContent = "";
+        proezdData.textContent = "";
         clothesData.textContent = "";
         schoolData.textContent = "";
         hospitalData.textContent = "";
@@ -134,6 +139,11 @@ const mobi = new Subject({
     selector: MOBI,
     data: mobiData
 })
+const proezd = new Subject({
+    class: 'proezd',
+    selector: PROEZD,
+    data: proezdData
+})
 const clothes = new Subject({
     class: 'clothes',
     selector: CLOTHES,
@@ -168,6 +178,7 @@ function countEconomy() {
         - parseFloat(localStorage.getItem('pharm1'))
         - parseFloat(localStorage.getItem('comm1'))
         - parseFloat(localStorage.getItem('mobi'))
+        - parseFloat(localStorage.getItem('proezd'))
         - parseFloat(localStorage.getItem('clothes'))
         - parseFloat(localStorage.getItem('school'))
         - parseFloat(localStorage.getItem('hospital'))

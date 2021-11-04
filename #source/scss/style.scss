@@ -19,10 +19,9 @@ body{
     &__budget,
     &__food,
     &__pharmacy-s,
-    &__pharmacy-x,
     &__communal-s,
-    &__communal-x,
     &__mobi,
+    &__proezd,
     &__clothes,
     &__school,
     &__hospital,
@@ -71,6 +70,7 @@ body{
     &__pharmacy-s-data,
     &__communal-s-data,
     &__mobi-data,
+    &__proezd-data,
     &__clothes-data,
     &__school-data,
     &__hospital-data,
@@ -199,6 +199,9 @@ body{
 .mobi:focus{
     box-shadow: 0 0 3px 5px darkslateblue;
 }
+.proezd:focus{
+    box-shadow: 0 0 3px 5px darkslateblue;
+}
 .clothes:focus{
     box-shadow: 0 0 3px 5px darkslateblue;
 }
@@ -238,6 +241,7 @@ input{
         &__pharmacy-s,
         &__communal-s,
         &__mobi,
+        &__proezd,
         &__clothes,
         &__school,
         &__hospital,
@@ -257,6 +261,7 @@ input{
         &__pharmacy-s-data,
         &__communal-s-data,
         &__mobi-data,
+        &__proezd-data,
         &__clothes-data,
         &__school-data,
         &__hospital-data,
@@ -299,6 +304,7 @@ input{
         &__pharmacy-s,
         &__communal-s,
         &__mobi,
+        &__proezd,
         &__clothes,
         &__school,
         &__hospital,
@@ -318,6 +324,7 @@ input{
         &__pharmacy-s-data,
         &__communal-s-data,
         &__mobi-data,
+        &__proezd-data,
         &__clothes-data,
         &__school-data,
         &__hospital-data,
@@ -360,6 +367,7 @@ input{
         &__pharmacy-s,
         &__communal-s,
         &__mobi,
+        &__proezd,
         &__clothes,
         &__school,
         &__hospital,
@@ -379,6 +387,7 @@ input{
         &__pharmacy-s-data,
         &__communal-s-data,
         &__mobi-data,
+        &__proezd-data,
         &__clothes-data,
         &__school-data,
         &__hospital-data,
