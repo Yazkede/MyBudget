@@ -84,6 +84,25 @@ function onClearDataClick() {
     return;
 }
 
+
+function countEconomy() {
+    let result;
+    result = (parseFloat(localStorage.getItem('budget'))
+        - parseFloat(localStorage.getItem('food'))
+        - parseFloat(localStorage.getItem('pharm1'))
+        - parseFloat(localStorage.getItem('comm1'))
+        - parseFloat(localStorage.getItem('mobi'))
+        - parseFloat(localStorage.getItem('proezd'))
+        - parseFloat(localStorage.getItem('clothes'))
+        - parseFloat(localStorage.getItem('school'))
+        - parseFloat(localStorage.getItem('hospital'))
+        - parseFloat(localStorage.getItem('pet'))
+        - parseFloat(localStorage.getItem('unexpected')));
+
+    localStorage.setItem('economy', result);
+    economy.textContent = localStorage.getItem('economy');
+}
+
 class Subject {
 
     constructor(options) {
@@ -112,7 +131,6 @@ class Subject {
         }
     }
 }
-
 
 const budget = new Subject({
     class: 'budget',
@@ -169,22 +187,3 @@ const unexpected = new Subject({
     selector: UNEXPECTED,
     data: unexpectedData
 })
-
-
-function countEconomy() {
-    let result;
-    result = (parseFloat(localStorage.getItem('budget'))
-        - parseFloat(localStorage.getItem('food'))
-        - parseFloat(localStorage.getItem('pharm1'))
-        - parseFloat(localStorage.getItem('comm1'))
-        - parseFloat(localStorage.getItem('mobi'))
-        - parseFloat(localStorage.getItem('proezd'))
-        - parseFloat(localStorage.getItem('clothes'))
-        - parseFloat(localStorage.getItem('school'))
-        - parseFloat(localStorage.getItem('hospital'))
-        - parseFloat(localStorage.getItem('pet'))
-        - parseFloat(localStorage.getItem('unexpected')));
-
-    localStorage.setItem('economy', result);
-    economy.textContent = localStorage.getItem('economy');
-}
