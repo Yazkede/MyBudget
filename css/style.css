@@ -268,6 +268,9 @@ input {
   display: flex;
   margin: 0 auto; }
 
+.minus {
+  color: crimson; }
+
 @media (max-width: 767px) {
   input {
     max-width: 150px;

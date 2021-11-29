@@ -34,18 +34,19 @@ BUTTON_CLEAR.addEventListener('click', onClearDataClick);
 
 
 function onSaveDataClick() {
-    budget.count()
-    food.count()
-    pharmacy.count()
-    communal.count()
-    mobi.count()
-    proezd.count()
-    clothes.count()
-    school.count()
-    hospital.count()
-    pet.count()
-    unexpected.count()
+    budget.count();
+    food.count();
+    pharmacy.count();
+    communal.count();
+    mobi.count();
+    proezd.count();
+    clothes.count();
+    school.count();
+    hospital.count();
+    pet.count();
+    unexpected.count();
     countEconomy();
+    changeColor();
 }
 
 
@@ -62,6 +63,7 @@ function onGetDataClick() {
     petData.textContent = localStorage.getItem('pet');
     unexpectedData.textContent = localStorage.getItem('unexpected');
     economy.textContent = localStorage.getItem('economy');
+    changeColor();
 }
 
 
@@ -187,3 +189,11 @@ const unexpected = new Subject({
     selector: UNEXPECTED,
     data: unexpectedData
 })
+
+function changeColor() {
+    if (localStorage.getItem('economy') <= 0) {
+        economy.classList.add('minus');
+    } else {
+        economy.classList.remove('minus');
+    }
+}
